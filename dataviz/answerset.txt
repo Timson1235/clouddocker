@@ -1,0 +1,30 @@
+Exercise 1: 
+What is the overall story of the resource? Describe it concisely in your own words (max 100 words).
+
+The Deutsche Welle article describes how climate hazards like heatwaves and flooding affect people unequally worldwide. Cities are mostly impacted, but there are many ways to prevent the impacts of these hazards, like sustainable drainage, green spaces, and tree planting. Vulnerable groups, especially older adults and those in poorer areas, also face higher risks due to inadequate urban infrastructure. Addressing these inequalities requires urban redesign, and global funding which could in some cases completely remove impact inequalities.
+
+Exercise 2: 
+Critically evaluate the overall design of the resource based on the “CRAP” Principles (contrast, repetition, alignment, and proximity). Note that you are not asked to focus on individual visualizations here but rather on the overall design, i.e. how visualizations and text are composed and organized.: 
+• Give examples of where and how your resource uses these principles effectively. 
+• Also, if applicable, give examples where and how the resource could improve in terms of these principles.
+
+Answer: Many of the Crap principles can be observed in the article. Headlines are written in different fond that is bold and larger to highlight them, Colour themes repeat themselves in each plot so that each colour is associated similarly from plot to plot, text blocks are separated from each other to structure the text  The plots also have a slighty different white backround than the articles backround which highlights them and also clearly separates them from the text. 
+
+
+Notes: 
+-Rising temperatures
+-cities warming faster 
+-more nature catstrophies
+-City construction plays a big role in handling these 
+-awareness is growing
+-most people in cities report high to medium climate hazard impacts, flooding and heat being the biggest hazards
+-concrete traps heat -> cities heat faster
+- cities in southeast asia will have to most additional hot days
+-one solution might be planting trees 
+-renaturalization helps with almost every nature hazard
+-cities in Afrika and asia are most vulnerable
+-climate hazard and vulnerability is a combination of threat
+-poor and elderly people are most vulnerable
+-unplanned city development is a risk
+-adaption measures could eliminate impact inequality
+
