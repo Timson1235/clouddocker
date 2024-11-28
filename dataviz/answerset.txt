@@ -1,15 +1,62 @@
 Exercise 1: 
 What is the overall story of the resource? Describe it concisely in your own words (max 100 words).
 
-The Deutsche Welle article describes how climate hazards like heatwaves and flooding affect people unequally worldwide. Cities are mostly impacted, but there are many ways to prevent the impacts of these hazards, like sustainable drainage, green spaces, and tree planting. Vulnerable groups, especially older adults and those in poorer areas, also face higher risks due to inadequate urban infrastructure. Addressing these inequalities requires urban redesign, and global funding which could in some cases completely remove impact inequalities.
+The Deutsche Welle article describes how climate hazards like heatwaves and flooding affect people unequally worldwide. 
+Cities are mostly impacted, but there are many ways to prevent the impacts of these hazards, like sustainable drainage, 
+green spaces, and tree planting. Vulnerable groups, especially older adults and those in poorer areas, also face higher 
+risks due to inadequate urban infrastructure. Addressing these inequalities requires urban redesign, and global funding 
+which could in some cases completely remove impact inequalities.
 
 Exercise 2: 
-Critically evaluate the overall design of the resource based on the “CRAP” Principles (contrast, repetition, alignment, and proximity). Note that you are not asked to focus on individual visualizations here but rather on the overall design, i.e. how visualizations and text are composed and organized.: 
+Critically evaluate the overall design of the resource based on the “CRAP” Principles (contrast, repetition, alignment, and proximity). 
+Note that you are not asked to focus on individual visualizations here but rather on the overall design, i.e. how visualizations and text are composed and organized.: 
 • Give examples of where and how your resource uses these principles effectively. 
 • Also, if applicable, give examples where and how the resource could improve in terms of these principles.
 
-Answer: Many of the Crap principles can be observed in the article. Headlines are written in different fond that is bold and larger to highlight them, Colour themes repeat themselves in each plot so that each colour is associated similarly from plot to plot, text blocks are separated from each other to structure the text  The plots also have a slighty different white backround than the articles backround which highlights them and also clearly separates them from the text. 
+Answer: 
+Many of the Crap principles can be observed in the article. In regard to the contrast important things are highlighted in different ways, 
+like the headlines of each passage with a bold font and larger fond size,  or the plot in which the groups and different vulnerabilities 
+are shown and the Low income households are highlighted with a contrast. There are also many repititions that occur that keeps the article structured, 
+like the colours that are being used, keep repeating themselves and the same time represent the same country or continent
+throughout the article. The alignment principle was also used in different ways throughout the article. The article has a very simple but also clean alignment,
+as it features only one block of text that flows from top to bottom, creating a cohesive narrative
+Lastly the principle of proximity can also be observed. I think the best example of that is in the placement of the plots. they are always placed right under the textblock, that describes
+a certain situation or statistic, that is than visualized by a plot right under it. The textblocks also can be clearly made out by the proximity of each paragraph to each other inside of a block.  
 
+
+Exercise 3
+Choose one visualization from your resource and work through the following aspects
+Notes: (1) you may choose two visualizations if only the combination of two visualizations tells the full
+story. (2) Include a screenshot of the visualization in your submission.
+a) Describe in one sentence the main insight that the visualization conveys.
+
+Adaptation for climate hazards, can decrease the impact inequality almost everywhere, even being able to eliminate the difference in Africa and Central/South America.
+
+b) Describe in a systematic way (bullet points, table, . . . ) the following aspects of the visualization:
+•Does it focus attention on a specific aspects of the data, and if so how?
+    -Two lines have different shades of blue that draw attention
+    -area difference between the lines is shaded, which highlights that difference and the change over time 
+•Presence of clutter?
+    -Very minimalistic plot
+    -no unessecary elements
+•How are text elements used within the visualization?
+    -Text is used for the title as well as the main insight the plot conveys right under the title
+    -Y-Axis categories are described with text, making it easier to understand
+    -text insight the plot is used once to describe each of the three possible time points
+•Where does it follow the CRAP principles?
+    -contrast: highlights the difference between two groups with shading, Also the midline described as: "occasional impacts" has a thicker line which centers the whole plot in a way
+    -repetition: 
+    -alignment: the explanitory text for the three timepoints is placed on the right of the plot instead of the left which mightve been more natural for reading purpose,
+    but this way the left side would be cluttered so it fits better on the rigfht side.
+    -proximity: proximity is deliberately used to seperate the different regions, by making the space between them a lot bigger than the space between the three time points
+•How is the visulization perceived by color blind people?
+    -since the plot uses two very different shades of blue, the differenece can be made out even with total colour blindness
+
+c) How do you personally evaluate the chosen visualization? Justify your answer. It may be based
+on the above aspects or other aspects that you find important.
+
+I personally like the plot for it`s visualization and the small details that follow the crap principles that make the plot easy to understand and visualy pleasing.
+My only problem I have with the plot is, that I would've liked a better explanation of the Y-Axis as well as the three timesteps and what exactly is meant by them.
 
 Notes: 
 -Rising temperatures
