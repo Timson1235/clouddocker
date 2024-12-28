@@ -1,0 +1,5 @@
+Interpretation
+Add baseline scores to visualization in task 4
+F1 score calculation explanation with 1 as class
+evaluationg of learning curves
+finish task 8
