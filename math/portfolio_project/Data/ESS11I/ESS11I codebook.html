@@ -1,0 +1,5179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        html {
+            max-width: 70ch;
+            /* larger spacing on larger screens, very small spacing on tiny screens */
+            padding: calc(1vmin + .5rem);
+            /* shorthand for margin-left/margin-right */
+            margin-inline: auto;
+            /* fluid sizing: https://frontaid.io/blog/fluid-typography-2d-css-locks-clamp/ */
+            font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+            /* use system font stack: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family */
+            font-family: system-ui;
+            --font-size-x-small: 0.8rem;
+            --font-size-small: 1rem;
+            --font-size-medium: 1.3rem;
+            --font-size-large: 1.65rem;
+            --font-size-x-large: 2.4rem;
+            --space-xx-small: 0.25rem;
+            --space-x-small: 0.5rem;
+            --space-small: 1rem;
+            --space-medium: 1.5rem;
+            --space-large: 3rem;
+            --space-x-large: 4rem;
+            --space-xx-large: 6rem;
+            --space-xxx-large: 8rem;
+            --divider-line: 1px dashed var(--color-light-gray);
+            --outline-width: 3px;
+        }
+
+        /* increase line-height for everything except headings */
+        body :not(:is(h1, h2, h3, h4, h5, h6)) {
+            line-height: 1.75;
+        }
+
+        /*
+        .var-header {
+            position: sticky;
+            top: 10px;
+        } */
+        .variable-meta-string {
+            margin-top: var(--space-small);
+            margin-bottom: 0;
+            font-size: var(--font-size-x-small);
+        }
+
+        .data-table {
+            margin-left: 0;
+            margin-bottom: 0;
+            margin-top: var(--space-small);
+            margin-left: var(--space-small);
+            font-size: var(--font-size-x-small);
+            display: block;
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .data-table table {
+            border-collapse: collapse;
+            font-size: var(--font-size-x-small);
+        }
+
+        .data-table thead {
+            border-bottom: 2px solid var(--color-black);
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        .data-table th {
+            padding-bottom: var(--space-x-small);
+            padding-right: var(--space-small);
+            padding-bottom: var(--space-xx-small);
+            padding-top: var(--space-xx-small);
+            text-align: left;
+        }
+
+    </style>
+    <title>Codebook</title>
+</head>
+
+
+
+
+
+<body>
+    <h1>Codebook</h1>
+    <h2>Datafile</h2>
+    
+        
+    <h3>ESS11 - data from Interviewer's questionnaire, edition 2.0</h3>
+    
+        
+        <p><a href="https://doi.org/10.21338/ess11inte02_0" target=”_blank”>doi:10.21338/ess11inte02_0</a></p>
+    
+        
+    
+
+    <h2>Variables</h2>
+    <ul class="toc-list">
+        
+        
+        <li>
+            <a href="#name">
+                <span>name</span>
+                
+                <span> - Title of dataset</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#essround">
+                <span>essround</span>
+                
+                <span> - ESS round</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#edition">
+                <span>edition</span>
+                
+                <span> - Edition</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#proddate">
+                <span>proddate</span>
+                
+                <span> - Production date</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#cntry">
+                <span>cntry</span>
+                
+                <span> - Country</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#idno">
+                <span>idno</span>
+                
+                <span> - Respondent's identification number</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#intagea">
+                <span>intagea</span>
+                
+                <span> - Age of interviewer</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#intgndr">
+                <span>intgndr</span>
+                
+                <span> - Gender of interviewer</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#vdcond">
+                <span>vdcond</span>
+                
+                <span> - Interview conducted, how</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#resclq">
+                <span>resclq</span>
+                
+                <span> - Clarification of questions</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#resrelq">
+                <span>resrelq</span>
+                
+                <span> - Respondent reluctant to answer</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#resbab">
+                <span>resbab</span>
+                
+                <span> - Respondent tried to answer questions to the best of ability</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#resundq">
+                <span>resundq</span>
+                
+                <span> - Respondent understood the questions</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#preintf">
+                <span>preintf</span>
+                
+                <span> - Anyone present who interfered with the interview</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#prewhp">
+                <span>prewhp</span>
+                
+                <span> - Husband/wife/partner interfered with interview</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#presd">
+                <span>presd</span>
+                
+                <span> - Son/daughter (inc. Step/adopted) interfered with interview</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#preppil">
+                <span>preppil</span>
+                
+                <span> - Parent/parent in law interfered with interview</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#preorel">
+                <span>preorel</span>
+                
+                <span> - Other relative interfered with interview</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#prenrel">
+                <span>prenrel</span>
+                
+                <span> - Other non-relative interfered with interview</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#predk">
+                <span>predk</span>
+                
+                <span> - Don't know who interfered with interview</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#prenap">
+                <span>prenap</span>
+                
+                <span> - Who interfered with interview not applicable</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#prena">
+                <span>prena</span>
+                
+                <span> - Who interfered with interview no answer</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#intlnga">
+                <span>intlnga</span>
+                
+                <span> - Interview questionnaire language</span>
+                
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="#intnum">
+                <span>intnum</span>
+                
+                <span> - Interviewer's identification number</span>
+                
+            </a>
+        </li>
+        
+
+    </ul>
+
+    
+    
+    <div>
+        <h3 id="name">name </h3>
+        
+            
+                <div>Title of dataset</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="essround">essround </h3>
+        
+            
+                <div>ESS round</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="edition">edition </h3>
+        
+            
+                <div>Edition</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="proddate">proddate </h3>
+        
+            
+                <div>Production date</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="cntry">cntry </h3>
+        
+            
+                <div>Country</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">AL</td>
+                            
+                            <td>Albania</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AT</td>
+                            
+                            <td>Austria</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BE</td>
+                            
+                            <td>Belgium</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BG</td>
+                            
+                            <td>Bulgaria</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CH</td>
+                            
+                            <td>Switzerland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CY</td>
+                            
+                            <td>Cyprus</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CZ</td>
+                            
+                            <td>Czechia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DE</td>
+                            
+                            <td>Germany</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DK</td>
+                            
+                            <td>Denmark</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">EE</td>
+                            
+                            <td>Estonia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ES</td>
+                            
+                            <td>Spain</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FI</td>
+                            
+                            <td>Finland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FR</td>
+                            
+                            <td>France</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GB</td>
+                            
+                            <td>United Kingdom</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GE</td>
+                            
+                            <td>Georgia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GR</td>
+                            
+                            <td>Greece</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HR</td>
+                            
+                            <td>Croatia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HU</td>
+                            
+                            <td>Hungary</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IE</td>
+                            
+                            <td>Ireland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IS</td>
+                            
+                            <td>Iceland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IL</td>
+                            
+                            <td>Israel</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IT</td>
+                            
+                            <td>Italy</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LT</td>
+                            
+                            <td>Lithuania</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LU</td>
+                            
+                            <td>Luxembourg</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LV</td>
+                            
+                            <td>Latvia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ME</td>
+                            
+                            <td>Montenegro</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MK</td>
+                            
+                            <td>North Macedonia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NL</td>
+                            
+                            <td>Netherlands</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NO</td>
+                            
+                            <td>Norway</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PL</td>
+                            
+                            <td>Poland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PT</td>
+                            
+                            <td>Portugal</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RO</td>
+                            
+                            <td>Romania</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RS</td>
+                            
+                            <td>Serbia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RU</td>
+                            
+                            <td>Russian Federation</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SE</td>
+                            
+                            <td>Sweden</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SI</td>
+                            
+                            <td>Slovenia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SK</td>
+                            
+                            <td>Slovakia</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TR</td>
+                            
+                            <td>Turkey</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">UA</td>
+                            
+                            <td>Ukraine</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">XK</td>
+                            
+                            <td>Kosovo</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="idno">idno </h3>
+        
+            
+                <div>Respondent's identification number</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="intagea">intagea </h3>
+        
+            
+                <div>Age of interviewer</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">999</td>
+                            
+                            <td>Not available*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="intgndr">intgndr </h3>
+        
+            
+                <div>Gender of interviewer</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Male</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>Female</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>Not available*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="vdcond">vdcond </h3>
+        
+            
+                <div>Interview conducted, how</div>
+            
+            
+                <div class="variable-meta-string"> ASK ALL
+INTERVIEWER: PLEASE SELECT HOW THIS INTERVIEW WAS CONDUCTED FROM THE LIST BELOW.</div>
+            
+            
+                <div class="variable-meta-string"> </div>
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>In person inside respondent's home</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>In person outside respondent's home</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>By video</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>Not available*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="resclq">resclq </h3>
+        
+            
+                <div>Clarification of questions</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Never</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>Almost never</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>Now and then</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>Often</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>Very often</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="resrelq">resrelq </h3>
+        
+            
+                <div>Respondent reluctant to answer</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Never</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>Almost never</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>Now and then</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>Often</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>Very often</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="resbab">resbab </h3>
+        
+            
+                <div>Respondent tried to answer questions to the best of ability</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Never</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>Almost never</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>Now and then</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>Often</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>Very often</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="resundq">resundq </h3>
+        
+            
+                <div>Respondent understood the questions</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Never</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>Almost never</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">3</td>
+                            
+                            <td>Now and then</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">4</td>
+                            
+                            <td>Often</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">5</td>
+                            
+                            <td>Very often</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">8</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="preintf">preintf </h3>
+        
+            
+                <div>Anyone present who interfered with the interview</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Yes</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">2</td>
+                            
+                            <td>No</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">9</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="prewhp">prewhp </h3>
+        
+            
+                <div>Husband/wife/partner interfered with interview</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Not marked</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Marked</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="presd">presd </h3>
+        
+            
+                <div>Son/daughter (inc. Step/adopted) interfered with interview</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Not marked</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Marked</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="preppil">preppil </h3>
+        
+            
+                <div>Parent/parent in law interfered with interview</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Not marked</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Marked</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="preorel">preorel </h3>
+        
+            
+                <div>Other relative interfered with interview</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Not marked</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Marked</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="prenrel">prenrel </h3>
+        
+            
+                <div>Other non-relative interfered with interview</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Not marked</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Marked</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="predk">predk </h3>
+        
+            
+                <div>Don't know who interfered with interview</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Not marked</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Marked</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="prenap">prenap </h3>
+        
+            
+                <div>Who interfered with interview not applicable</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Not marked</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Marked</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="prena">prena </h3>
+        
+            
+                <div>Who interfered with interview no answer</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">0</td>
+                            
+                            <td>Not marked</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">1</td>
+                            
+                            <td>Marked</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="intlnga">intlnga </h3>
+        
+            
+                <div>Interview questionnaire language</div>
+            
+            
+            
+            
+            
+        
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody class="codelist">
+                        
+                        
+                        <tr>
+                            <td class="nowrap">AAR</td>
+                            
+                            <td>Afar</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ABK</td>
+                            
+                            <td>Abkhazian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ACE</td>
+                            
+                            <td>Achinese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ACH</td>
+                            
+                            <td>Acoli</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ADA</td>
+                            
+                            <td>Adangme</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ADY</td>
+                            
+                            <td>Adyghe, Adygei</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AFA</td>
+                            
+                            <td>Afro-Asiatic (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AFH</td>
+                            
+                            <td>Afrihili</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AFR</td>
+                            
+                            <td>Afrikaans</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AIN</td>
+                            
+                            <td>Ainu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AKA</td>
+                            
+                            <td>Akan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AKK</td>
+                            
+                            <td>Akkadian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ALB</td>
+                            
+                            <td>Albanian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ALE</td>
+                            
+                            <td>Aleut</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ALG</td>
+                            
+                            <td>Algonquian languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ALT</td>
+                            
+                            <td>Southern Altai</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AMH</td>
+                            
+                            <td>Amharic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ANG</td>
+                            
+                            <td>English, Old (ca.450-1100)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ANP</td>
+                            
+                            <td>Angika</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">APA</td>
+                            
+                            <td>Apache languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ARA</td>
+                            
+                            <td>Arabic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ARC</td>
+                            
+                            <td>Aramaic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ARG</td>
+                            
+                            <td>Aragonese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ARM</td>
+                            
+                            <td>Armenian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ARN</td>
+                            
+                            <td>Mapudungun, Mapuche</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ARP</td>
+                            
+                            <td>Arapaho</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ART</td>
+                            
+                            <td>Artificial (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ARW</td>
+                            
+                            <td>Arawak</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ASM</td>
+                            
+                            <td>Assamese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AST</td>
+                            
+                            <td>Asturian, Bable</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ATH</td>
+                            
+                            <td>Athapascan languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AUS</td>
+                            
+                            <td>Australian languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AVA</td>
+                            
+                            <td>Avaric</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AVE</td>
+                            
+                            <td>Avestan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AWA</td>
+                            
+                            <td>Awadhi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AYM</td>
+                            
+                            <td>Aymara</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">AZE</td>
+                            
+                            <td>Azerbaijani</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BAD</td>
+                            
+                            <td>Banda</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BAI</td>
+                            
+                            <td>Bamileke languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BAK</td>
+                            
+                            <td>Bashkir</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BAL</td>
+                            
+                            <td>Baluchi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BAM</td>
+                            
+                            <td>Bambara</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BAN</td>
+                            
+                            <td>Balinese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BAQ</td>
+                            
+                            <td>Basque</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BAS</td>
+                            
+                            <td>Basa</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BAT</td>
+                            
+                            <td>Baltic (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BEJ</td>
+                            
+                            <td>Beja</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BEL</td>
+                            
+                            <td>Belarusian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BEM</td>
+                            
+                            <td>Bemba</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BEN</td>
+                            
+                            <td>Bengali</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BER</td>
+                            
+                            <td>Berber (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BHO</td>
+                            
+                            <td>Bhojpuri</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BIH</td>
+                            
+                            <td>Bihari</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BIK</td>
+                            
+                            <td>Bikol</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BIN</td>
+                            
+                            <td>Bini</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BIS</td>
+                            
+                            <td>Bislama</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BLA</td>
+                            
+                            <td>Siksika</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BNT</td>
+                            
+                            <td>Bantu (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BOS</td>
+                            
+                            <td>Bosnian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BRA</td>
+                            
+                            <td>Braj</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BRE</td>
+                            
+                            <td>Breton</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BTK</td>
+                            
+                            <td>Batak (Indonesia)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BUA</td>
+                            
+                            <td>Buriat</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BUG</td>
+                            
+                            <td>Buginese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BUL</td>
+                            
+                            <td>Bulgarian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BUR</td>
+                            
+                            <td>Burmese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">BYN</td>
+                            
+                            <td>Blin, Bilin</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CAD</td>
+                            
+                            <td>Caddo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CAI</td>
+                            
+                            <td>Central American Indian (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CAR</td>
+                            
+                            <td>Galibi Carib</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CAT</td>
+                            
+                            <td>Catalan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CAU</td>
+                            
+                            <td>Caucasian (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CEB</td>
+                            
+                            <td>Cebuano</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CEL</td>
+                            
+                            <td>Celtic (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHA</td>
+                            
+                            <td>Chamorro</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHB</td>
+                            
+                            <td>Chibcha</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHE</td>
+                            
+                            <td>Chechen</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHG</td>
+                            
+                            <td>Chagatai</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHI</td>
+                            
+                            <td>Chinese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHK</td>
+                            
+                            <td>Chuukese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHM</td>
+                            
+                            <td>Mari</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHN</td>
+                            
+                            <td>Chinook jargon</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHO</td>
+                            
+                            <td>Choctaw</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHP</td>
+                            
+                            <td>Chipewyan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHR</td>
+                            
+                            <td>Cherokee</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHU</td>
+                            
+                            <td>Old/Church Slavic, Slavonic, Bulgarian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHV</td>
+                            
+                            <td>Chuvash</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CHY</td>
+                            
+                            <td>Cheyenne</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CMC</td>
+                            
+                            <td>Chamic languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CNR</td>
+                            
+                            <td>Montenegrin</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">COP</td>
+                            
+                            <td>Coptic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">COR</td>
+                            
+                            <td>Cornish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">COS</td>
+                            
+                            <td>Corsican</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CPE</td>
+                            
+                            <td>Creoles and pidgins, English-based (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CPF</td>
+                            
+                            <td>Creoles and pidgins, French-based (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CPP</td>
+                            
+                            <td>Creoles and pidgins, Portuguese-based (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CRE</td>
+                            
+                            <td>Cree</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CRH</td>
+                            
+                            <td>Crimean Tatar, Crimean Turkish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CRP</td>
+                            
+                            <td>Creoles and pidgins(Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CSB</td>
+                            
+                            <td>Kashubian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CUS</td>
+                            
+                            <td>Cushitic (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">CZE</td>
+                            
+                            <td>Czech</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DAK</td>
+                            
+                            <td>Dakota</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DAN</td>
+                            
+                            <td>Danish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DAR</td>
+                            
+                            <td>Dargwa</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DAY</td>
+                            
+                            <td>Dayak</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DEL</td>
+                            
+                            <td>Delaware</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DEN</td>
+                            
+                            <td>Slave (Athapascan)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DGR</td>
+                            
+                            <td>Dogrib</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DIN</td>
+                            
+                            <td>Dinka</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DIV</td>
+                            
+                            <td>Divehi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DOI</td>
+                            
+                            <td>Dogri</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DRA</td>
+                            
+                            <td>Dravidian (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DSB</td>
+                            
+                            <td>Lower Sorbian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DUA</td>
+                            
+                            <td>Duala</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DUM</td>
+                            
+                            <td>Dutch, Middle (ca. 1050-1350)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DUT</td>
+                            
+                            <td>Dutch</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DYU</td>
+                            
+                            <td>Dyula</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">DZO</td>
+                            
+                            <td>Dzongkha</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">EFI</td>
+                            
+                            <td>Efik</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">EGY</td>
+                            
+                            <td>Egyptian (Ancient)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">EKA</td>
+                            
+                            <td>Ekajuk</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ELX</td>
+                            
+                            <td>Elamite</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ENG</td>
+                            
+                            <td>English</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ENM</td>
+                            
+                            <td>English, Middle (1100-1500)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">EPO</td>
+                            
+                            <td>Esperanto</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">EST</td>
+                            
+                            <td>Estonian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">EWE</td>
+                            
+                            <td>Ewe</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">EWO</td>
+                            
+                            <td>Ewondo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FAN</td>
+                            
+                            <td>Fang</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FAO</td>
+                            
+                            <td>Faroese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FAT</td>
+                            
+                            <td>Fanti</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FIJ</td>
+                            
+                            <td>Fijian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FIL</td>
+                            
+                            <td>Filipino, Pilipino</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FIN</td>
+                            
+                            <td>Finnish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FIU</td>
+                            
+                            <td>Finno-Ugrian (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FON</td>
+                            
+                            <td>Fon</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FRE</td>
+                            
+                            <td>French</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FRM</td>
+                            
+                            <td>French, Middle (ca.1400-1600)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FRO</td>
+                            
+                            <td>French, Old (842-ca.1400)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FRR</td>
+                            
+                            <td>Northern Frisian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FRS</td>
+                            
+                            <td>Eastern Frisian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FRY</td>
+                            
+                            <td>Western Frisian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FUL</td>
+                            
+                            <td>Fulah</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">FUR</td>
+                            
+                            <td>Friulian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GAA</td>
+                            
+                            <td>Ga</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GAY</td>
+                            
+                            <td>Gayo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GBA</td>
+                            
+                            <td>Gbaya</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GEM</td>
+                            
+                            <td>Germanic (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GEO</td>
+                            
+                            <td>Georgian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GER</td>
+                            
+                            <td>German</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GEZ</td>
+                            
+                            <td>Geez</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GIL</td>
+                            
+                            <td>Gilbertese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GLA</td>
+                            
+                            <td>Gaelic Scottish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GLE</td>
+                            
+                            <td>Irish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GLG</td>
+                            
+                            <td>Gallegan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GLV</td>
+                            
+                            <td>Manx</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GMH</td>
+                            
+                            <td>German, Middle High (ca.1050-1500)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GOH</td>
+                            
+                            <td>German, Old High (ca.750-1050)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GON</td>
+                            
+                            <td>Gondi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GOR</td>
+                            
+                            <td>Gorontalo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GOT</td>
+                            
+                            <td>Gothic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GRB</td>
+                            
+                            <td>Grebo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GRC</td>
+                            
+                            <td>Greek, Ancient (to 1453)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GRE</td>
+                            
+                            <td>Greek, Modern (1453-)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GRN</td>
+                            
+                            <td>Guarani</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GSW</td>
+                            
+                            <td>Swiss German, Alemannic, Alsatian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GUJ</td>
+                            
+                            <td>Gujarati</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">GWI</td>
+                            
+                            <td>Gwich'in</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HAI</td>
+                            
+                            <td>Haida</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HAT</td>
+                            
+                            <td>Haitian, Haitian Creole</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HAU</td>
+                            
+                            <td>Hausa</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HAW</td>
+                            
+                            <td>Hawaiian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HEB</td>
+                            
+                            <td>Hebrew</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HER</td>
+                            
+                            <td>Herero</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HIL</td>
+                            
+                            <td>Hiligaynon</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HIM</td>
+                            
+                            <td>Himachali languages, Western Pahari languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HIN</td>
+                            
+                            <td>Hindi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HIT</td>
+                            
+                            <td>Hittite</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HMN</td>
+                            
+                            <td>Hmong, Mong</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HMO</td>
+                            
+                            <td>Hiri Motu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HRV</td>
+                            
+                            <td>Croatian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HSB</td>
+                            
+                            <td>Upper Sorbian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HUN</td>
+                            
+                            <td>Hungarian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">HUP</td>
+                            
+                            <td>Hupa</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IBA</td>
+                            
+                            <td>Iban</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IBO</td>
+                            
+                            <td>Igbo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ICE</td>
+                            
+                            <td>Icelandic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IDO</td>
+                            
+                            <td>Ido</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">III</td>
+                            
+                            <td>Sichuan Yi, Nuosu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IJO</td>
+                            
+                            <td>Ijo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IKU</td>
+                            
+                            <td>Inuktitut</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ILE</td>
+                            
+                            <td>Interlingue</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ILO</td>
+                            
+                            <td>Iloko</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">INA</td>
+                            
+                            <td>Interlingua (International Auxiliary Language Association)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">INC</td>
+                            
+                            <td>Indic (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IND</td>
+                            
+                            <td>Indonesian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">INE</td>
+                            
+                            <td>Indo-European (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">INH</td>
+                            
+                            <td>Ingush</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IPK</td>
+                            
+                            <td>Inupiaq</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IRA</td>
+                            
+                            <td>Iranian (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">IRO</td>
+                            
+                            <td>Iroquoian languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ITA</td>
+                            
+                            <td>Italian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">JAV</td>
+                            
+                            <td>Javanese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">JBO</td>
+                            
+                            <td>Lojban</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">JPN</td>
+                            
+                            <td>Japanese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">JPR</td>
+                            
+                            <td>Judeo-Persian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">JRB</td>
+                            
+                            <td>Judeo-Arabic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAA</td>
+                            
+                            <td>Kara-Kalpak</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAB</td>
+                            
+                            <td>Kabyle</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAC</td>
+                            
+                            <td>Kachin</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAL</td>
+                            
+                            <td>Kalaallisut</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAM</td>
+                            
+                            <td>Kamba</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAN</td>
+                            
+                            <td>Kannada</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAR</td>
+                            
+                            <td>Karen</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAS</td>
+                            
+                            <td>Kashmiri</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAU</td>
+                            
+                            <td>Kanuri</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAW</td>
+                            
+                            <td>Kawi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KAZ</td>
+                            
+                            <td>Kazakh</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KBD</td>
+                            
+                            <td>Kabardian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KHA</td>
+                            
+                            <td>Khasi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KHI</td>
+                            
+                            <td>Khoisan (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KHM</td>
+                            
+                            <td>Central Khmer</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KHO</td>
+                            
+                            <td>Khotanese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KIK</td>
+                            
+                            <td>Kikuyu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KIN</td>
+                            
+                            <td>Kinyarwanda</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KIR</td>
+                            
+                            <td>Kirghiz</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KMB</td>
+                            
+                            <td>Kimbundu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KOK</td>
+                            
+                            <td>Konkani</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KOM</td>
+                            
+                            <td>Komi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KON</td>
+                            
+                            <td>Kongo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KOR</td>
+                            
+                            <td>Korean</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KOS</td>
+                            
+                            <td>Kosraean</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KPE</td>
+                            
+                            <td>Kpelle</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KRC</td>
+                            
+                            <td>Karachay-Balkar</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KRL</td>
+                            
+                            <td>Karelian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KRO</td>
+                            
+                            <td>Kru</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KRU</td>
+                            
+                            <td>Kurukh</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KUA</td>
+                            
+                            <td>Kuanyama</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KUM</td>
+                            
+                            <td>Kumyk</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KUR</td>
+                            
+                            <td>Kurdish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">KUT</td>
+                            
+                            <td>Kutenai</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LAD</td>
+                            
+                            <td>Ladino</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LAH</td>
+                            
+                            <td>Lahnda</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LAM</td>
+                            
+                            <td>Lamba</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LAO</td>
+                            
+                            <td>Lao</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LAT</td>
+                            
+                            <td>Latin</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LAV</td>
+                            
+                            <td>Latvian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LEZ</td>
+                            
+                            <td>Lezghian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LIM</td>
+                            
+                            <td>Limburgan, Limburger, Limburgish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LIN</td>
+                            
+                            <td>Lingala</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LIT</td>
+                            
+                            <td>Lithuanian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LOL</td>
+                            
+                            <td>Mongo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LOZ</td>
+                            
+                            <td>Lozi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LTZ</td>
+                            
+                            <td>Luxembourgish, Letzeburgesch</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LUA</td>
+                            
+                            <td>Luba-Lulua</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LUB</td>
+                            
+                            <td>Luba-Katanga</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LUG</td>
+                            
+                            <td>Ganda</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LUI</td>
+                            
+                            <td>Luiseno</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LUN</td>
+                            
+                            <td>Lunda</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LUO</td>
+                            
+                            <td>Luo (Kenya and Tanzania)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">LUS</td>
+                            
+                            <td>Lushai</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAC</td>
+                            
+                            <td>Macedonian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAD</td>
+                            
+                            <td>Madurese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAG</td>
+                            
+                            <td>Magahi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAH</td>
+                            
+                            <td>Marshallese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAI</td>
+                            
+                            <td>Maithili</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAK</td>
+                            
+                            <td>Makasar</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAL</td>
+                            
+                            <td>Malayalam</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAN</td>
+                            
+                            <td>Mandingo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAO</td>
+                            
+                            <td>Maori</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAP</td>
+                            
+                            <td>Austronesian (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAR</td>
+                            
+                            <td>Marathi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAS</td>
+                            
+                            <td>Masai</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MAY</td>
+                            
+                            <td>Malay</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MDF</td>
+                            
+                            <td>Moksha</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MDR</td>
+                            
+                            <td>Mandar</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MEN</td>
+                            
+                            <td>Mende</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MGA</td>
+                            
+                            <td>Irish, Middle (900-1200)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MIC</td>
+                            
+                            <td>Micmac, Mi'kmaq</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MIN</td>
+                            
+                            <td>Minangkabau</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MIS</td>
+                            
+                            <td>Uncoded languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MKH</td>
+                            
+                            <td>Mon-Khmer (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MLG</td>
+                            
+                            <td>Malagasy</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MLT</td>
+                            
+                            <td>Maltese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MNC</td>
+                            
+                            <td>Manchu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MNI</td>
+                            
+                            <td>Manipuri</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MNO</td>
+                            
+                            <td>Manobo languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MOH</td>
+                            
+                            <td>Mohawk</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MON</td>
+                            
+                            <td>Mongolian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MOS</td>
+                            
+                            <td>Mossi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MUL</td>
+                            
+                            <td>Multiple languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MUN</td>
+                            
+                            <td>Munda languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MUS</td>
+                            
+                            <td>Creek</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MWL</td>
+                            
+                            <td>Mirandese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MWR</td>
+                            
+                            <td>Marwari</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MYN</td>
+                            
+                            <td>Mayan languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">MYV</td>
+                            
+                            <td>Erzya</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NAH</td>
+                            
+                            <td>Nahuatl</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NAI</td>
+                            
+                            <td>North American Indian (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NAP</td>
+                            
+                            <td>Neapolitan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NAU</td>
+                            
+                            <td>Nauru</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NAV</td>
+                            
+                            <td>Navaho</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NBL</td>
+                            
+                            <td>Ndebele, South</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NDE</td>
+                            
+                            <td>Ndebele, North</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NDO</td>
+                            
+                            <td>Ndonga</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NDS</td>
+                            
+                            <td>Low German, Saxon</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NEP</td>
+                            
+                            <td>Nepali</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NEW</td>
+                            
+                            <td>Newari</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NIA</td>
+                            
+                            <td>Nias</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NIC</td>
+                            
+                            <td>Niger-Kordofanian (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NIU</td>
+                            
+                            <td>Niuean</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NNO</td>
+                            
+                            <td>Norwegian Nynorsk</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NOB</td>
+                            
+                            <td>Norwegian Bokmål</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NOG</td>
+                            
+                            <td>Nogai</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NON</td>
+                            
+                            <td>Norse, Old</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NOR</td>
+                            
+                            <td>Norwegian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NQO</td>
+                            
+                            <td>N'Ko</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NSO</td>
+                            
+                            <td>Nothern Sotho, Pedi, Sepedi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NUB</td>
+                            
+                            <td>Nubian languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NWC</td>
+                            
+                            <td>Classical Newari, Old Newari, Classical Nepal Bhasa</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NYA</td>
+                            
+                            <td>Chewa, Chichewa, Nyanja</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NYM</td>
+                            
+                            <td>Nyamwezi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NYN</td>
+                            
+                            <td>Nyankole</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NYO</td>
+                            
+                            <td>Nyoro</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">NZI</td>
+                            
+                            <td>Nzima</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">OCI</td>
+                            
+                            <td>Occitan (post 1500)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">OJI</td>
+                            
+                            <td>Ojibwa</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ORI</td>
+                            
+                            <td>Oriya</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ORM</td>
+                            
+                            <td>Oromo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">OSA</td>
+                            
+                            <td>Osage</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">OSS</td>
+                            
+                            <td>Ossetian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">OTA</td>
+                            
+                            <td>Turkish, Ottoman (1500-1928)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">OTO</td>
+                            
+                            <td>Otomian languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PAA</td>
+                            
+                            <td>Papuan (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PAG</td>
+                            
+                            <td>Pangasinan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PAL</td>
+                            
+                            <td>Pahlavi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PAM</td>
+                            
+                            <td>Pampanga</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PAN</td>
+                            
+                            <td>Panjabi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PAP</td>
+                            
+                            <td>Papiamento</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PAU</td>
+                            
+                            <td>Palauan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PEO</td>
+                            
+                            <td>Persian, Old (ca.600-400)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PER</td>
+                            
+                            <td>Persian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PHI</td>
+                            
+                            <td>Philippine (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PHN</td>
+                            
+                            <td>Phoenician</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PLI</td>
+                            
+                            <td>Pali</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">POL</td>
+                            
+                            <td>Polish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PON</td>
+                            
+                            <td>Pohnpeian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">POR</td>
+                            
+                            <td>Portuguese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PRA</td>
+                            
+                            <td>Prakrit languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PRO</td>
+                            
+                            <td>Provençal, Old (to 1500)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">PUS</td>
+                            
+                            <td>Pushto</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">QAA</td>
+                            
+                            <td>Local language, Italy</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">QPL</td>
+                            
+                            <td>Local language, Poland</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">QUE</td>
+                            
+                            <td>Quechua</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RAJ</td>
+                            
+                            <td>Rajasthani</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RAP</td>
+                            
+                            <td>Rapanui</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RAR</td>
+                            
+                            <td>Rarotongan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ROA</td>
+                            
+                            <td>Romance (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ROH</td>
+                            
+                            <td>Romansh</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ROM</td>
+                            
+                            <td>Romany</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RUM</td>
+                            
+                            <td>Romanian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RUN</td>
+                            
+                            <td>Rundi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RUP</td>
+                            
+                            <td>Aromanian, Arumanian, Macedo-Romanian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">RUS</td>
+                            
+                            <td>Russian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SAD</td>
+                            
+                            <td>Sandawe</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SAG</td>
+                            
+                            <td>Sango</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SAH</td>
+                            
+                            <td>Yakut</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SAI</td>
+                            
+                            <td>South American Indian (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SAL</td>
+                            
+                            <td>Salishan languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SAM</td>
+                            
+                            <td>Samaritan Aramaic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SAN</td>
+                            
+                            <td>Sanskrit</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SAS</td>
+                            
+                            <td>Sasak</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SAT</td>
+                            
+                            <td>Santali</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SCN</td>
+                            
+                            <td>Sicilian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SCO</td>
+                            
+                            <td>Scots</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SEL</td>
+                            
+                            <td>Selkup</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SEM</td>
+                            
+                            <td>Semitic (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SGA</td>
+                            
+                            <td>Irish, Old (to 900)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SGN</td>
+                            
+                            <td>Sign languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SHN</td>
+                            
+                            <td>Shan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SID</td>
+                            
+                            <td>Sidamo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SIN</td>
+                            
+                            <td>Sinhalese, Sinhala</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SIO</td>
+                            
+                            <td>Siouan languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SIT</td>
+                            
+                            <td>Sino-Tibetan (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SLA</td>
+                            
+                            <td>Slavic (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SLO</td>
+                            
+                            <td>Slovak</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SLV</td>
+                            
+                            <td>Slovenian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SMA</td>
+                            
+                            <td>Southern Sami</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SME</td>
+                            
+                            <td>Northern Sami</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SMI</td>
+                            
+                            <td>Sami languages (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SMJ</td>
+                            
+                            <td>Lule Sami</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SMN</td>
+                            
+                            <td>Inari Sami</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SMO</td>
+                            
+                            <td>Samoan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SMS</td>
+                            
+                            <td>Skolt Sami</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SNA</td>
+                            
+                            <td>Shona</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SND</td>
+                            
+                            <td>Sindhi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SNK</td>
+                            
+                            <td>Soninke</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SOG</td>
+                            
+                            <td>Sogdian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SOM</td>
+                            
+                            <td>Somali</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SON</td>
+                            
+                            <td>Songhai</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SOT</td>
+                            
+                            <td>Sotho, Southern</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SPA</td>
+                            
+                            <td>Spanish, Castilian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SRD</td>
+                            
+                            <td>Sardinian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SRN</td>
+                            
+                            <td>Sranan Tongo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SRP</td>
+                            
+                            <td>Serbian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SRR</td>
+                            
+                            <td>Serer</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SSA</td>
+                            
+                            <td>Nilo-Saharan (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SSW</td>
+                            
+                            <td>Swati</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SUK</td>
+                            
+                            <td>Sukuma</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SUN</td>
+                            
+                            <td>Sundanese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SUS</td>
+                            
+                            <td>Susu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SUX</td>
+                            
+                            <td>Sumerian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SWA</td>
+                            
+                            <td>Swahili</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SWE</td>
+                            
+                            <td>Swedish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SYC</td>
+                            
+                            <td>Classical Syriac</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">SYR</td>
+                            
+                            <td>Syriac</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TAH</td>
+                            
+                            <td>Tahitian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TAI</td>
+                            
+                            <td>Tai (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TAM</td>
+                            
+                            <td>Tamil</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TAT</td>
+                            
+                            <td>Tatar</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TEL</td>
+                            
+                            <td>Telugu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TEM</td>
+                            
+                            <td>Timne</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TER</td>
+                            
+                            <td>Tereno</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TET</td>
+                            
+                            <td>Tetum</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TGK</td>
+                            
+                            <td>Tajik</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TGL</td>
+                            
+                            <td>Tagalog</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">THA</td>
+                            
+                            <td>Thai</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TIB</td>
+                            
+                            <td>Tibetan</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TIG</td>
+                            
+                            <td>Tigre</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TIR</td>
+                            
+                            <td>Tigrinya</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TIV</td>
+                            
+                            <td>Tiv</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TKL</td>
+                            
+                            <td>Tokelau</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TLH</td>
+                            
+                            <td>Klingon, tlhIngan-Hol</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TLI</td>
+                            
+                            <td>Tlingit</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TMH</td>
+                            
+                            <td>Tamashek</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TOG</td>
+                            
+                            <td>Tonga (Nyasa)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TON</td>
+                            
+                            <td>Tonga (Tonga Islands)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TPI</td>
+                            
+                            <td>Tok Pisin</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TSI</td>
+                            
+                            <td>Tsimshian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TSN</td>
+                            
+                            <td>Tswana</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TSO</td>
+                            
+                            <td>Tsonga</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TUK</td>
+                            
+                            <td>Turkmen</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TUM</td>
+                            
+                            <td>Tumbuka</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TUP</td>
+                            
+                            <td>Tupi languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TUR</td>
+                            
+                            <td>Turkish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TUT</td>
+                            
+                            <td>Altaic (Other)</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TVL</td>
+                            
+                            <td>Tuvalu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TWI</td>
+                            
+                            <td>Twi</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">TYV</td>
+                            
+                            <td>Tuvinian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">UDM</td>
+                            
+                            <td>Udmurt</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">UGA</td>
+                            
+                            <td>Ugaritic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">UIG</td>
+                            
+                            <td>Uighur</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">UKR</td>
+                            
+                            <td>Ukrainian</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">UMB</td>
+                            
+                            <td>Umbundu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">UND</td>
+                            
+                            <td>Undetermined</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">URD</td>
+                            
+                            <td>Urdu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">UZB</td>
+                            
+                            <td>Uzbek</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">VAI</td>
+                            
+                            <td>Vai</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">VEN</td>
+                            
+                            <td>Venda</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">VIE</td>
+                            
+                            <td>Vietnamese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">VOL</td>
+                            
+                            <td>Volapük</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">VOT</td>
+                            
+                            <td>Votic</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">WAK</td>
+                            
+                            <td>Wakashan languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">WAL</td>
+                            
+                            <td>Wolaitta, Wolaytta</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">WAR</td>
+                            
+                            <td>Waray</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">WAS</td>
+                            
+                            <td>Washo</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">WEL</td>
+                            
+                            <td>Welsh</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">WEN</td>
+                            
+                            <td>Sorbian languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">WLN</td>
+                            
+                            <td>Walloon</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">WOL</td>
+                            
+                            <td>Wolof</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">XAL</td>
+                            
+                            <td>Kalmyk, Oriat</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">XHO</td>
+                            
+                            <td>Xhosa</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">YAO</td>
+                            
+                            <td>Yao</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">YAP</td>
+                            
+                            <td>Yapese</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">YID</td>
+                            
+                            <td>Yiddish</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">YOR</td>
+                            
+                            <td>Yoruba</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">YPK</td>
+                            
+                            <td>Yupik languages</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZAP</td>
+                            
+                            <td>Zapotec</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZBL</td>
+                            
+                            <td>Blissymbols, Blissymbolics, Bliss</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZEN</td>
+                            
+                            <td>Zenaga</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZGH</td>
+                            
+                            <td>Standard Moroccan Tamazight</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZHA</td>
+                            
+                            <td>Zhuang, Chuang</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZND</td>
+                            
+                            <td>Zande</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZUL</td>
+                            
+                            <td>Zulu</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZUN</td>
+                            
+                            <td>Zuni</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZXX</td>
+                            
+                            <td>No linguistic content, Not applicable</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">ZZA</td>
+                            
+                            <td>Zaza, Dimili, Dimli, Kirdki, Kirmanjki, Zazaki</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">777</td>
+                            
+                            <td>Refusal*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">888</td>
+                            
+                            <td>Don't know*</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="nowrap">999</td>
+                            
+                            <td>No answer*</td>
+                            
+                        </tr>
+                        
+                        
+                    </tbody>
+
+                </table>
+                
+                <p>
+                    <span> *) Missing Value </span>
+                </p>
+                
+            </div>
+            
+        
+    </div>
+    
+    
+    <div>
+        <h3 id="intnum">intnum </h3>
+        
+            
+                <div>Interviewer's identification number</div>
+            
+            
+            
+            
+            
+        
+        
+    </div>
+    
+</body>
+
+</html>
